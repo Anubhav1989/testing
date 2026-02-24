@@ -1,10 +1,10 @@
-from flask import Flask,request,jsonify
+from flask import Flask, jsonify, request
 import joblib
 import numpy as np
 
-app= Flask(__name__)
+app=Flask(__name__)
 
-model=joblib.load('lr_model.pkl')
+model=joblib.load('lr_model.pkl1')
 
 @app.route('/predict',methods=['POST'])
 def predict():
@@ -15,6 +15,7 @@ def predict():
         return jsonify({'prediction':int(prediction[0])})
     except Exception as e:
         return jsonify({'error':str(e)})
-
+    
 if __name__ == '__main__':
-    app.run(debug=True) 
+    app.run(debug=True)
+

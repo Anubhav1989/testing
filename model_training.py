@@ -19,4 +19,4 @@ lr.fit(x_train,y_train)
 import joblib
 
 joblib.dump(lr,'lr_model.pkl')
-print('Model is saved as lr_model.pkl')
+print('Model is saved as lr_model.pkl') 
